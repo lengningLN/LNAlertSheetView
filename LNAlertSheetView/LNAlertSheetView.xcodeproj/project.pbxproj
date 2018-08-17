@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C7AD47B221265AB500B5D4E6 /* LNActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = C7AD47B121265AB500B5D4E6 /* LNActionSheet.m */; };
 		C7B3D376211D6DB300AB48D3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C7B3D375211D6DB300AB48D3 /* AppDelegate.m */; };
 		C7B3D379211D6DB300AB48D3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C7B3D378211D6DB300AB48D3 /* ViewController.m */; };
 		C7B3D37C211D6DB300AB48D3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7B3D37A211D6DB300AB48D3 /* Main.storyboard */; };
@@ -16,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C7AD47B021265AB500B5D4E6 /* LNActionSheet.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LNActionSheet.h; sourceTree = "<group>"; };
+		C7AD47B121265AB500B5D4E6 /* LNActionSheet.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LNActionSheet.m; sourceTree = "<group>"; };
 		C7B3D371211D6DB300AB48D3 /* LNAlertSheetView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LNAlertSheetView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7B3D374211D6DB300AB48D3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C7B3D375211D6DB300AB48D3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -39,6 +42,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C7AD47AF212659F700B5D4E6 /* LNActionSheetView */ = {
+			isa = PBXGroup;
+			children = (
+				C7AD47B021265AB500B5D4E6 /* LNActionSheet.h */,
+				C7AD47B121265AB500B5D4E6 /* LNActionSheet.m */,
+			);
+			path = LNActionSheetView;
+			sourceTree = "<group>";
+		};
 		C7B3D368211D6DB300AB48D3 = {
 			isa = PBXGroup;
 			children = (
@@ -62,6 +74,7 @@
 				C7B3D375211D6DB300AB48D3 /* AppDelegate.m */,
 				C7B3D377211D6DB300AB48D3 /* ViewController.h */,
 				C7B3D378211D6DB300AB48D3 /* ViewController.m */,
+				C7AD47AF212659F700B5D4E6 /* LNActionSheetView */,
 				C7B3D37A211D6DB300AB48D3 /* Main.storyboard */,
 				C7B3D37D211D6DB400AB48D3 /* Assets.xcassets */,
 				C7B3D37F211D6DB400AB48D3 /* LaunchScreen.storyboard */,
@@ -144,6 +157,7 @@
 				C7B3D379211D6DB300AB48D3 /* ViewController.m in Sources */,
 				C7B3D384211D6DB400AB48D3 /* main.m in Sources */,
 				C7B3D376211D6DB300AB48D3 /* AppDelegate.m in Sources */,
+				C7AD47B221265AB500B5D4E6 /* LNActionSheet.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

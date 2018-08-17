@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,85 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r1P-Tq-OHz">
+                                <rect key="frame" x="50" y="170" width="275" height="35"/>
+                                <color key="backgroundColor" red="0.19476064913010427" green="0.93040797012331056" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="dPK-XS-xTv"/>
+                                </constraints>
+                                <state key="normal" title="LNActionSheet-1">
+                                    <color key="titleColor" red="0.39651420780147262" green="0.43088271666986977" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="typeOne:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3eO-Il-5Gd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tYx-bN-sYE">
+                                <rect key="frame" x="50" y="280" width="275" height="35"/>
+                                <color key="backgroundColor" red="0.19476064909999999" green="0.93040797009999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="QzX-UX-fov"/>
+                                </constraints>
+                                <state key="normal" title="LNActionSheet-3">
+                                    <color key="titleColor" red="0.39651420780000002" green="0.4308827167" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="typeThree:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eyk-c8-Lud"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CEc-5R-5Fb">
+                                <rect key="frame" x="50" y="225" width="275" height="35"/>
+                                <color key="backgroundColor" red="0.19476064909999999" green="0.93040797009999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="MIA-EI-XVH"/>
+                                </constraints>
+                                <state key="normal" title="LNActionSheet-2">
+                                    <color key="titleColor" red="0.39651420780000002" green="0.4308827167" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="typeTwo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Dmx-j0-F4b"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Axw-9S-3rf">
+                                <rect key="frame" x="50" y="335" width="275" height="35"/>
+                                <color key="backgroundColor" red="0.19476064909999999" green="0.93040797009999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="807-aZ-G4r"/>
+                                </constraints>
+                                <state key="normal" title="LNActionSheet-4">
+                                    <color key="titleColor" red="0.39651420780000002" green="0.4308827167" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="typeFour:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fTC-dD-mwh"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Axw-9S-3rf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="2JA-ZP-c6o"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="r1P-Tq-OHz" secondAttribute="trailing" constant="50" id="2bq-gk-THX"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Axw-9S-3rf" secondAttribute="trailing" constant="50" id="4Ki-F5-1kN"/>
+                            <constraint firstItem="r1P-Tq-OHz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="8Lc-Mk-Xqv"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="CEc-5R-5Fb" secondAttribute="trailing" constant="50" id="CuY-V1-zU3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="tYx-bN-sYE" secondAttribute="trailing" constant="50" id="QyP-Wu-bah"/>
+                            <constraint firstItem="Axw-9S-3rf" firstAttribute="top" secondItem="tYx-bN-sYE" secondAttribute="bottom" constant="20" id="Yda-lG-U45"/>
+                            <constraint firstItem="tYx-bN-sYE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="bEl-mF-gKg"/>
+                            <constraint firstItem="tYx-bN-sYE" firstAttribute="top" secondItem="CEc-5R-5Fb" secondAttribute="bottom" constant="20" id="ikm-FR-kW6"/>
+                            <constraint firstItem="r1P-Tq-OHz" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="150" id="sGn-fI-vrQ"/>
+                            <constraint firstItem="CEc-5R-5Fb" firstAttribute="top" secondItem="r1P-Tq-OHz" secondAttribute="bottom" constant="20" id="stc-j4-uyi"/>
+                            <constraint firstItem="CEc-5R-5Fb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="us4-5a-cIJ"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
         </scene>
     </scenes>
 </document>
