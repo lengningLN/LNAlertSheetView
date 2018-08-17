@@ -120,7 +120,7 @@
         [array addObject:model];
     }
 
-    [LNActionSheet showWithDesc:@"事件在创建方法的block回调中处理" actionModels:[NSArray arrayWithArray:array] action:^(LNActionSheetModel *model) {
+    [LNActionSheet showWithDesc:nil actionModels:[NSArray arrayWithArray:array] action:^(LNActionSheetModel *model) {
          NSLog(@"------你点击的是：%@",model.title);
     }];
 }
