@@ -169,7 +169,11 @@ static LNActionSheet *sheet = nil;
             UILabel * subTitle = [[UILabel alloc]init];
             subTitle.frame = CGRectMake(0, 30, screenWidth, 20);
             subTitle.textAlignment = NSTextAlignmentCenter;
-            subTitle.textColor = Sub_Item_Normal_Color;
+            if (model.itemType == LNActionSheetItemDelete) {
+                subTitle.textColor = Item_Delete_Color;
+            }else{
+                subTitle.textColor = Sub_Item_Normal_Color;
+            }
             subTitle.font = Sub_Item_Normal_Font;
             subTitle.text = model.subTitle;
             [button addSubview:subTitle];
