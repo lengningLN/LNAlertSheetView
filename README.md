@@ -34,6 +34,8 @@ LNActionSheet
 
 ## 文字介绍
 - 只需要引入LNActionSheet类，调用+ (void)showWithDesc:(NSString*)desc actionModels:(NSArray<LNActionSheetModel*> *)mdoels action:(void(^)(LNActionSheetModel *model))action; 美好的事情立刻发生
+
+
 -如果需要改变现实的外观，请直接修改头文件中的宏
 #define BG_Color             [UIColor colorWithRed:0 green:0 blue:0 alpha:0.6]    
 #define Bottom_BG_Color      [UIColor colorWithHexString:@"EFEFEF"]     
@@ -47,9 +49,6 @@ LNActionSheet
 #define Item_Delete_Font       [UIFont systemFontOfSize:13]
 
 
-- 只需要引入LNActionSheet类，调用+ (void)showWithDesc:(NSString*)desc actionModels:(NSArray<LNActionSheetModel*> *)mdoels action:(void(^)(LNActionSheetModel *model))action; 美好的事情立刻发生 
-- 只需要引入LNActionSheet类，调用+ (void)showWithDesc:(NSString*)desc actionModels:(NSArray<LNActionSheetModel*> *)mdoels action:(void(^)(LNActionSheetModel *model))action; 美好的事情立刻发生
-- 只需要引入LNActionSheet类，调用+ (void)showWithDesc:(NSString*)desc actionModels:(NSArray<LNActionSheetModel*> *)mdoels action:(void(^)(LNActionSheetModel *model))action; 美好的事情立刻发生
 ## 代码介绍
 首先创建需要操作的item对应的model
 ```
