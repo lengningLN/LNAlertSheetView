@@ -9,33 +9,59 @@
 
 
 # Interduce 【简单介绍】
+- 使用极其简单，一行代码全部搞定
+- UI的显示分为有没有头部描述、有没有子标题
+- 事件的处理分为在LNActionSheetModel内部处理 和 在显示的回调中处理，根据个人的使用习惯而定，没有什么区别
+
 
 
 # Features【能做什么】
-
+ 更快、更简洁
  
 # 目前存在的问题
-
+ 目前没发现问题
 
 # Class【使用到的类】
-
+LNActionSheet
 
 
 # Getting Started【开始使用】
 
 ## 效果演示
-![](/1.png)
-![](/2.png)
-![](/3.png)
+![1](/1.PNG)
+![2](/2.PNG)
+![3](/3.PNG)
 
 ## 文字介绍
-
+ 只需要引入LNActionSheet类，调用+ (void)showWithDesc:(NSString*)desc actionModels:(NSArray<LNActionSheetModel*> *)mdoels action:(void(^)(LNActionSheetModel *model))action; 美好的事情立刻发生
 ## 代码介绍
-- 创建cell的设置
+首先创建需要操作的item对应的model
+```
+ NSMutableArray *array = [NSMutableArray new];
+    NSArray *titles = @[@"加好友",@"加关注",@"收藏",@"举报",@"删除"];
+    NSArray *subTitles = @[@"找也找也找朋友，找到一个好朋友",
+                           @"加关注是成为好友的第一步",
+                           @"喜欢的话就保存起来吧",
+                           @"涉黄、赌博、消沉的可以举报，帮我们净化环境",
+                           @"要慎重哦，删了就全没了"];
+    for (int i = 0; i < titles.count; i++) {
+        LNActionSheetModel *model = [[LNActionSheetModel alloc]init];
+        model.title = titles[i];
+        model.subTitle = subTitles[i];
+        model.sheetId = i;
+        model.itemType = LNActionSheetItemNoraml;
+        if (i == titles.count-1) {
+            model.itemType = LNActionSheetItemDelete;
+        }
+        [array addObject:model];
+    }
 ```
 
+然后创建并显示
 ```
-
+ [LNActionSheet showWithDesc:@"有标题和子标题的sheet" actionModels:[NSArray arrayWithArray:array] action:^(LNActionSheetModel *model) {
+    }];
+```
 
 
 
