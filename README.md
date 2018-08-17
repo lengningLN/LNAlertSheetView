@@ -33,7 +33,23 @@ LNActionSheet
 ![3](/3.PNG)
 
 ## 文字介绍
- 只需要引入LNActionSheet类，调用+ (void)showWithDesc:(NSString*)desc actionModels:(NSArray<LNActionSheetModel*> *)mdoels action:(void(^)(LNActionSheetModel *model))action; 美好的事情立刻发生
+- 只需要引入LNActionSheet类，调用+ (void)showWithDesc:(NSString*)desc actionModels:(NSArray<LNActionSheetModel*> *)mdoels action:(void(^)(LNActionSheetModel *model))action; 美好的事情立刻发生
+-如果需要改变现实的外观，请直接修改头文件中的宏
+#define BG_Color             [UIColor colorWithRed:0 green:0 blue:0 alpha:0.6]    
+#define Bottom_BG_Color      [UIColor colorWithHexString:@"EFEFEF"]     
+#define Desc_Color           [UIColor colorWithHexString:@"#666666"]   
+#define Desc_Font            [UIFont systemFontOfSize:12]
+#define Item_Normal_Color      [UIColor blackColor]
+#define Item_Normal_Font       [UIFont systemFontOfSize:16]
+#define Sub_Item_Normal_Color  [UIColor blackColor]
+#define Sub_Item_Normal_Font   [UIFont systemFontOfSize:12]
+#define Item_Delete_Color      [UIColor redColor]
+#define Item_Delete_Font       [UIFont systemFontOfSize:13]
+
+
+- 只需要引入LNActionSheet类，调用+ (void)showWithDesc:(NSString*)desc actionModels:(NSArray<LNActionSheetModel*> *)mdoels action:(void(^)(LNActionSheetModel *model))action; 美好的事情立刻发生 
+- 只需要引入LNActionSheet类，调用+ (void)showWithDesc:(NSString*)desc actionModels:(NSArray<LNActionSheetModel*> *)mdoels action:(void(^)(LNActionSheetModel *model))action; 美好的事情立刻发生
+- 只需要引入LNActionSheet类，调用+ (void)showWithDesc:(NSString*)desc actionModels:(NSArray<LNActionSheetModel*> *)mdoels action:(void(^)(LNActionSheetModel *model))action; 美好的事情立刻发生
 ## 代码介绍
 首先创建需要操作的item对应的model
 ```
@@ -57,6 +73,20 @@ LNActionSheet
     }
 ```
 
+其中model中用到一个枚举，从来表明对应的item的类型
+```
+/**
+ item的类型
+
+ - LNActionSheetItemNoraml: 默认都是普通类型的
+ */
+typedef  NS_OPTIONS(NSUInteger,LNActionSheetItemType){
+    LNActionSheetItemNoraml = 0,    //普通
+    LNActionSheetItemDelete,        //删除
+    LNActionSheetItemSure,          //确定
+};
+```
+
 然后创建并显示
 ```
  [LNActionSheet showWithDesc:@"有标题和子标题的sheet" actionModels:[NSArray arrayWithArray:array] action:^(LNActionSheetModel *model) {
@@ -66,7 +96,7 @@ LNActionSheet
 
 
 # more about  【更多】
-1. 如果有什么问题，请在[issues](https://github.com/lengningLN/LNSwipeCellDemo/issues)区域提问，我会抽时间改进。
+1. 如果有什么问题，请在[issues](https://github.com/lengningLN/LNAlertSheetView/issues)区域提问，我会抽时间改进。
 2. [我的博客](https://www.jianshu.com/u/dbd52f0e4f1c)
 ### 打赏
 ![](http://m.qpic.cn/psb?/V11R4JcH0fAdbu/h4vWrizoOlby*zntVMiu.1F9CMMMx2T9BOWUjSEnCE8!/b/dDUBAAAAAAAA&bo=nALQAgAAAAADB24!&rf=viewer_4)
