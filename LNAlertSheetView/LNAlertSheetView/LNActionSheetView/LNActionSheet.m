@@ -24,11 +24,25 @@
 
 @end
 
-#define itemHeight 50
-#define middleGap 10
-#define itemOriginTag 23
 
 @implementation LNActionSheet
+/**
+ 所有需要修改的外观显示的常量
+ */
+#define BG_Color             [UIColor colorWithRed:0 green:0 blue:0 alpha:0.6]
+#define Bottom_BG_Color      [UIColor colorWithHexString:@"EFEFEF"]
+#define Desc_Color           [UIColor colorWithHexString:@"#666666"]
+#define Desc_Font            [UIFont systemFontOfSize:12]
+#define Item_Normal_Color      [UIColor blackColor]
+#define Item_Normal_Font       [UIFont systemFontOfSize:16]
+#define Sub_Item_Normal_Color  [UIColor blackColor]
+#define Sub_Item_Normal_Font   [UIFont systemFontOfSize:12]
+#define Item_Delete_Color      [UIColor redColor]
+#define Item_Delete_Font       [UIFont systemFontOfSize:13]
+
+static const CGFloat kitemHeight = 50.0f;
+static const CGFloat kmiddleGap = 10.0f;
+static const int kitemOriginTag = 23;
 
 static LNActionSheet *sheet = nil;
 + (void)initialize
@@ -93,14 +107,14 @@ static LNActionSheet *sheet = nil;
     //确定整个视图的frame
     CGFloat screenWidth = self.bounds.size.width;
     CGFloat screenHeight = self.bounds.size.height;
-    self.bgView.frame = CGRectMake(0, screenHeight, screenWidth,orginItemY+(self.actionModels.count+1)*(itemHeight+1)+middleGap);
+    self.bgView.frame = CGRectMake(0, screenHeight, screenWidth,orginItemY+(self.actionModels.count+1)*(kitemHeight+1)+kmiddleGap);
     
     for (int i = 0;i < self.actionModels.count; i++) {
         LNActionSheetModel * model = self.actionModels[i];
         UIButton * button = [[UIButton alloc]init];
         button.backgroundColor = [UIColor whiteColor];
-        button.tag = itemOriginTag + i;
-        button.frame = CGRectMake(0,orginItemY+(itemHeight+1)*i, screenWidth, itemHeight);
+        button.tag = kitemOriginTag + i;
+        button.frame = CGRectMake(0,orginItemY+(kitemHeight+1)*i, screenWidth, kitemHeight);
         [button addTarget:self action:@selector(itemClick:) forControlEvents:UIControlEventTouchUpInside];
         [self.bgView addSubview:button];
         
@@ -139,13 +153,13 @@ static LNActionSheet *sheet = nil;
     
     UIButton * button = [[UIButton alloc]init];
     button.backgroundColor = [UIColor whiteColor];
-    button.tag = itemOriginTag + self.actionModels.count;
-    button.frame = CGRectMake(0,  self.bgView.frame.size.height-itemHeight-1, screenWidth, itemHeight);
+    button.tag = kitemOriginTag + self.actionModels.count;
+    button.frame = CGRectMake(0,  self.bgView.frame.size.height-kitemHeight-1, screenWidth, kitemHeight);
     [button addTarget:self action:@selector(itemClick:) forControlEvents:UIControlEventTouchUpInside];
     [self.bgView addSubview:button];
     
     UILabel * title = [[UILabel alloc]init];
-    title.frame = CGRectMake(0, 0, screenWidth, itemHeight);
+    title.frame = CGRectMake(0, 0, screenWidth, kitemHeight);
     title.textAlignment = NSTextAlignmentCenter;
     title.textColor = Item_Normal_Color;
     title.font = Item_Normal_Font;
@@ -181,8 +195,8 @@ static LNActionSheet *sheet = nil;
 -(CGFloat)descriptionStringHeight
 {
     CGSize size = [self.desc boundingRectWithSize:CGSizeMake(self.bounds.size.width-15*2, CGFLOAT_MAX) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:self.descriptionL.font} context:nil].size;
-    if (size.height < itemHeight) {
-        return itemHeight;
+    if (size.height < kitemHeight) {
+        return kitemHeight;
     }
     return size.height;
 }
@@ -191,7 +205,7 @@ static LNActionSheet *sheet = nil;
 -(void)itemClick:(UIButton*)button
 {
     [sheet hide];
-    NSInteger index = button.tag - itemOriginTag;
+    NSInteger index = button.tag - kitemOriginTag;
     if (index == self.actionModels.count) {
         //用户点击取消
         return;

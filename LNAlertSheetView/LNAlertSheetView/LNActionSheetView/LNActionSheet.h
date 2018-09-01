@@ -6,24 +6,14 @@
 //  Copyright © 2018年 刘宁. All rights reserved.
 //
 
-#define BG_Color   [UIColor colorWithRed:0 green:0 blue:0 alpha:0.6]
-#define Bottom_BG_Color [UIColor colorWithHexString:@"EFEFEF"]
-#define Desc_Color  [UIColor colorWithHexString:@"#666666"]
-#define Desc_Font   [UIFont systemFontOfSize:12]
-
-#define Item_Normal_Color  [UIColor blackColor]
-#define Item_Normal_Font   [UIFont systemFontOfSize:16]
-
-#define Sub_Item_Normal_Color  [UIColor blackColor]
-#define Sub_Item_Normal_Font   [UIFont systemFontOfSize:12]
-
-#define Item_Delete_Color  [UIColor redColor]
-#define Item_Delete_Font   [UIFont systemFontOfSize:13]
 
 
 #import <UIKit/UIKit.h>
+/**
+ item的类型
 
-//外观类型
+ - LNActionSheetItemNoraml: 默认都是普通类型的
+ */
 typedef  NS_OPTIONS(NSUInteger,LNActionSheetItemType){
     LNActionSheetItemNoraml = 0,    //普通
     LNActionSheetItemDelete,        //删除
@@ -52,13 +42,28 @@ typedef  NS_OPTIONS(NSUInteger,LNActionSheetItemType){
  */
 @property (nonatomic, assign) LNActionSheetItemType itemType;
 
-//这个model被点击了触发这个block
+
+/**
+ 这个model所在的item被点击了触发这个block
+ */
 @property (nonatomic, copy) void(^actionBlock)(void);
 
 @end
 
 @interface LNActionSheet : UIView
+
+/**
+ 显示sheetView
+
+ @param desc 头部描述
+ @param mdoels 操作的item数据
+ @param action 操作每个item时触发的事件
+ */
 + (void)showWithDesc:(NSString*)desc actionModels:(NSArray<LNActionSheetModel*> *)mdoels action:(void(^)(LNActionSheetModel *model))action;
 
+
+/**
+ 隐藏
+ */
 + (void)hide;
 @end
