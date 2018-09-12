@@ -166,8 +166,6 @@ static LNActionSheet *sheet = nil;
     title.text = NSLocalizedString(@"取消", nil);
     [button addSubview:title];
     
-    [self.bgView addSubview:button];
-    
     UITapGestureRecognizer * tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(hide)];
     [self addGestureRecognizer:tap];
     
