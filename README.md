@@ -1,5 +1,8 @@
 # LNAlertSheetView
 一套友好的、方便集成的底部item选择视图,性能优秀，集成简单，对原有代码风格不产生任何影响！
+# 继承
+1. 直接把LNActionSheet.h 和 LNActionSheet.m 拖到工程中使用
+2. 使用Cocoapods： pod "LNAlertSheetView"
 
 # 本次优化
 1. 改成单利实现，性能更优秀
